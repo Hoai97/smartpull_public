@@ -1,0 +1,24 @@
+# config/database.yml
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV['DB_USERNAME'] || 'shark_user' %>
+  password: <%= ENV['DB_PASSWORD'] || 'bita123' %>
+  host: <%= ENV['DB_HOST'] || 'localhost' %>
+
+development:
+  <<: *default
+  database: sharkpj
+
+test:
+  <<: *default
+  database: sharkpj
+
+production:
+  <<: *default
+  database: sharkpj
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
+  host: <%= ENV['DB_HOST'] %>
