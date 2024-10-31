@@ -59,7 +59,7 @@ group :test do
 end
 
 #202040919
-gem 'pg', '~> 1.1'
+gem 'pg', '~> 1.5'
 # Gemfile
 gem 'dotenv-rails', groups: [:development, :test]
 
